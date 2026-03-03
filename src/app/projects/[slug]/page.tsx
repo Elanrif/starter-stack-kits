@@ -24,11 +24,11 @@ export default async function ProjectPage({
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-white/3 rounded-full blur-3xl"></div>
       </div>
 
-      <main className="relative z-10 container mx-auto px-6 py-12">
+      <main className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Back Button */}
         <Link
           href="/projects"
-          className="inline-flex items-center gap-2 mb-8 text-gray-400 hover:text-white transition-colors duration-300 group"
+          className="inline-flex items-center gap-2 mb-6 sm:mb-8 text-gray-400 hover:text-white transition-colors duration-300 group text-sm sm:text-base"
         >
           <svg
             className="w-5 h-5 group-hover:-translate-x-1 transition-transform"
@@ -47,17 +47,22 @@ export default async function ProjectPage({
         </Link>
 
         {/* Project Header */}
-        <div className="mb-12">
-          <h1 className="text-6xl font-extrabold mb-4 bg-linear-to-r from-white to-red-300 bg-clip-text text-transparent">
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-6xl font-extrabold mb-2 sm:mb-4 bg-linear-to-r from-white to-cyan-300 bg-clip-text text-transparent">
             {project.name}
           </h1>
-          <p className="text-xl text-gray-400">{project.description}</p>
+          <p className="text-sm sm:text-xl text-gray-400">
+            {project.description}
+          </p>
         </div>
 
         {/* Project Image */}
-        <div className="mb-12 rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300 shadow-2xl shadow-black/30">
+        <div
+          className="mb-8 sm:mb-12 rounded-lg sm:rounded-2xl overflow-hidden border border-white/20
+         hover:border-white/40 transition-all duration-300 shadow-2xl shadow-black/30"
+        >
           <Image
-            src={project.image}
+            src={project.image ?? "/images/default.png"}
             alt={project.name}
             className="w-full h-auto"
             width={1200}
@@ -66,28 +71,31 @@ export default async function ProjectPage({
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Main Content */}
           <div className="lg:col-span-2">
             {/* About Section */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-4 flex items-center gap-3">
-                <div className="w-1 h-8 bg-linear-to-b from-white to-gray-300"></div>
+            <section className="mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4 flex items-center gap-3">
+                <div className="w-1 h-6 sm:h-8 bg-linear-to-b from-white to-gray-300"></div>
                 About This Project
               </h2>
-              <p className="text-gray-300 leading-relaxed text-lg">
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-lg">
                 {project.description}
               </p>
             </section>
 
             {/* CTA Buttons */}
-            <section className="mb-12">
-              <div className="flex flex-wrap gap-4">
+            <section className="mb-8 sm:mb-12">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-6 py-3 bg-linear-to-r from-red-900/40 to-red-900/20 border border-red-900/50 rounded-lg hover:border-red-900/80 hover:bg-red-900/30 transition-all duration-300 text-white font-semibold"
+                  className="group flex items-center justify-center sm:justify-start gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-linear-to-r
+                   from-red-900/40 to-cyan-900/20 border border-cyan-900/50 rounded-lg
+                    hover:border-cyan-900/80 hover:bg-cyan-900/30 transition-all
+                     duration-300 text-white font-semibold text-sm sm:text-base"
                 >
                   <svg
                     className="w-5 h-5"
@@ -102,7 +110,7 @@ export default async function ProjectPage({
                   href={project.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-6 py-3 bg-linear-to-r from-white to-gray-300 rounded-lg hover:from-gray-300 hover:to-white transition-all duration-300 text-black font-semibold shadow-lg shadow-white/20 hover:shadow-white/40"
+                  className="group flex items-center justify-center sm:justify-start gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-linear-to-r from-red-900/40 to-cyan-900/20 border border-cyan-900/50 rounded-lg hover:border-cyan-900/80 hover:bg-cyan-900/30 transition-all duration-300 text-white font-semibold text-sm sm:text-base"
                 >
                   <svg
                     className="w-5 h-5"
@@ -123,7 +131,7 @@ export default async function ProjectPage({
                   href={project.presentation}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-6 py-3 bg-linear-to-r from-red-900/40 to-red-900/20 border border-red-900/50 rounded-lg hover:border-red-900/80 hover:bg-red-900/30 transition-all duration-300 text-white font-semibold"
+                  className="group flex items-center justify-center sm:justify-start gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-linear-to-r from-red-900/40 to-cyan-900/20 border border-cyan-900/50 rounded-lg hover:border-cyan-900/80 hover:bg-cyan-900/30 transition-all duration-300 text-white font-semibold text-sm sm:text-base"
                 >
                   <svg
                     className="w-5 h-5"
@@ -147,8 +155,8 @@ export default async function ProjectPage({
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Technologies */}
-            <div className="bg-linear-to-br from-white/10 to-white/5 border border-white/20 rounded-2xl p-6 backdrop-blur-sm">
-              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+            <div className="bg-linear-to-br from-white/10 to-white/5 border border-white/20 rounded-lg sm:rounded-2xl p-4 sm:p-6 backdrop-blur-sm">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-white"></div>
                 Technologies
               </h3>
@@ -156,7 +164,8 @@ export default async function ProjectPage({
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1.5 bg-white/10 text-gray-200 text-sm border border-white/20 rounded-full font-semibold hover:border-white/40 transition-all duration-300"
+                    className="px-2 sm:px-3 py-1 sm:py-1.5 bg-white/10 text-gray-200 text-xs sm:text-sm border
+                     border-white/20 rounded-full font-semibold hover:border-white/40 transition-all duration-300"
                   >
                     {tech}
                   </span>

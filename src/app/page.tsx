@@ -12,30 +12,29 @@ export default function Home() {
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-white/3 rounded-full blur-3xl"></div>
       </div>
 
-      <main className="relative z-10 container mx-auto px-6 py-12">
+      <main className="relative z-10 container mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <Hero />
 
         {/* Projects Section */}
-        <section className="mt-1.5">
-          <ProjectsSection />
-        </section>
+        <ProjectsSection />
 
         {/* Contact Section */}
-        <section id="contact" className="text-center py-24">
-          <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
-          <p className="text-lg text-gray-400 mb-12">
-            Open to remote & freelance opportunities. Let’s connect!
+        <section id="contact" className="text-center py-12 sm:py-24">
+          <h2 className="text-2xl sm:text-4xl font-bold mb-4">Get in Touch</h2>
+          <p className="text-base sm:text-lg text-gray-400 mb-8 sm:mb-12">
+            Open to remote & freelance opportunities. Let&apos;s connect!
           </p>
-          <div className="flex justify-center gap-8 bg-linear-to-r from-white/10 to-white/5 border border-white/20 rounded-2xl p-8 w-fit mx-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 bg-linear-to-r
+           from-white/10 to-white/5 border border-white/20 rounded-lg sm:rounded-2xl p-6 sm:p-8 w-fit mx-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm">
             <Link
               href="https://github.com/johndoe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl hover:text-white transition-colors"
+              className="text-2xl sm:text-3xl hover:text-white transition-colors"
             >
               <svg
-                className="w-10 h-10"
+                className="w-8 h-8 sm:w-10 sm:h-10"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -46,10 +45,10 @@ export default function Home() {
               href="https://linkedin.com/in/johndoe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl hover:text-white transition-colors"
+              className="text-2xl sm:text-3xl hover:text-white transition-colors"
             >
               <svg
-                className="w-10 h-10"
+                className="w-8 h-8 sm:w-10 sm:h-10"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -58,10 +57,10 @@ export default function Home() {
             </Link>
             <Link
               href="mailto:johndoe@example.com"
-              className="text-3xl hover:text-white transition-colors"
+              className="text-2xl sm:text-3xl hover:text-white transition-colors"
             >
               <svg
-                className="w-10 h-10"
+                className="w-8 h-8 sm:w-10 sm:h-10"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

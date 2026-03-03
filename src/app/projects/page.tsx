@@ -25,11 +25,11 @@ export default function ProjectsPage() {
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-red-500/5 rounded-full blur-3xl"></div>
       </div>
 
-      <main className="relative z-10 container mx-auto px-6 py-12">
+      <main className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12">
         {/* Back Button */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 mb-12 text-gray-400 hover:text-white transition-colors duration-300 group"
+          className="inline-flex items-center gap-2 mb-8 sm:mb-12 text-gray-400 hover:text-white transition-colors duration-300 group text-sm sm:text-base"
         >
           <svg
             className="w-5 h-5 group-hover:-translate-x-1 transition-transform"
@@ -48,18 +48,18 @@ export default function ProjectsPage() {
         </Link>
 
         {/* Page Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-6xl font-extrabold mb-4 bg-linear-to-r from-white to-red-300 bg-clip-text text-transparent">
-            My Projects
+        <div className="mb-8 sm:mb-12 text-center">
+          <h1 className="text-2xl sm:text-6xl font-extrabold mb-2 sm:mb-4 bg-linear-to-r from-white to-red-300 bg-clip-text text-transparent">
+            My Kickstart Projects
           </h1>
-          <p className="text-xl text-gray-400">
+          <p className="text-sm sm:text-xl text-gray-400">
             Explore my latest work and projects
           </p>
         </div>
 
         {/* Featured Toggle */}
-        <div className="mb-8 flex justify-center">
-          <label className="flex items-center gap-3 cursor-pointer">
+        <div className="mb-6 sm:mb-8 flex justify-center">
+          <label className="flex items-center gap-2 sm:gap-3 cursor-pointer text-sm sm:text-base\">
             <input
               type="checkbox"
               checked={showFeaturedOnly}
@@ -73,10 +73,10 @@ export default function ProjectsPage() {
         </div>
 
         {/* Search Bar */}
-        <div className="mb-12 flex justify-center">
+        <div className="mb-8 sm:mb-12 flex justify-center">
           <div className="relative w-full max-w-md group">
             <svg
-              className="absolute left-4 top-3.5 w-5 h-5 text-gray-500 group-focus-within:text-red-400 transition-colors"
+              className="absolute left-4 top-3.5 w-5 h-5 text-gray-500 group-focus-within:text-red-400 transition-colors\"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -99,22 +99,22 @@ export default function ProjectsPage() {
         </div>
 
         {/* Results Info */}
-        <div className="mb-8 text-center text-sm text-gray-400">
+        <div className="mb-6 sm:mb-8 text-center text-xs sm:text-sm text-gray-400">
           {filteredProjects.length} project
           {filteredProjects.length !== 1 ? "s" : ""} found
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project) => (
               <ProjectCard key={project.slug} project={project} />
             ))
           ) : (
-            <div className="col-span-full text-center py-20">
+            <div className="col-span-full text-center py-12 sm:py-20">
               <div className="mb-4">
                 <svg
-                  className="w-16 h-16 mx-auto text-gray-600"
+                  className="w-10 h-10 sm:w-16 sm:h-16 mx-auto text-gray-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -127,8 +127,12 @@ export default function ProjectsPage() {
                   />
                 </svg>
               </div>
-              <p className="text-xl text-gray-400 mb-2">No projects found</p>
-              <p className="text-gray-500">Try adjusting your search terms</p>
+              <p className="text-base sm:text-xl text-gray-400 mb-2">
+                No projects found
+              </p>
+              <p className="text-xs sm:text-sm text-gray-500">
+                Try adjusting your search terms
+              </p>
             </div>
           )}
         </div>
