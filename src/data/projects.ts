@@ -1,0 +1,90 @@
+export const projects = [
+  {
+    slug: "project-1",
+    name: "Projet 1",
+    description:
+      "Application web moderne permettant de gérer des tâches quotidiennes avec une interface intuitive, des notifications en temps réel et une synchronisation multi-appareils. Idéale pour les freelances et les équipes agiles.",
+    image: "/images/project-1.png",
+    github: "https://github.com/votre-projet-1",
+    website: "https://votre-projet-1.com",
+    presentation: "https://canva.com/votre-projet-1",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    slug: "project-2",
+    name: "Projet 2",
+    description:
+      "Plateforme collaborative pour le partage de documents et la gestion de projets. Intégration d’un chat en direct, gestion des rôles utilisateurs et export PDF. Pensée pour les PME et startups.",
+    image: "/images/project-2.png",
+    github: "https://github.com/votre-projet-2",
+    website: "https://votre-projet-2.com",
+    presentation: "https://canva.com/votre-projet-2",
+    technologies: ["React", "Node.js", "CSS"],
+  },
+  {
+    slug: "portfolio-premium",
+    name: "Portfolio Premium",
+    description:
+      "Portfolio personnel premium avec animations fluides, dark mode, et intégration d’un blog. Optimisé SEO et performance, il met en avant les compétences et réalisations d’un développeur moderne.",
+    image: "/images/portfolio-premium.png",
+    github: "https://github.com/votre-portfolio-premium",
+    website: "https://portfolio-premium.com",
+    presentation: "https://canva.com/portfolio-premium",
+    technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
+  },
+  {
+    slug: "saas-dashboard",
+    name: "SaaS Dashboard",
+    description:
+      "Dashboard analytique pour SaaS avec graphiques dynamiques, gestion des utilisateurs, notifications et export de rapports. Interface responsive et personnalisable pour les entreprises tech.",
+    image: "/images/saas-dashboard.png",
+    github: "https://github.com/votre-saas-dashboard",
+    website: "https://saas-dashboard.com",
+    presentation: "https://canva.com/saas-dashboard",
+    technologies: ["React", "Recharts", "Styled Components"],
+  },
+  {
+    slug: "ecommerce-app",
+    name: "E-commerce App",
+    description:
+      "Application e-commerce complète avec gestion du panier, paiement Stripe, suivi des commandes et espace administrateur. Design moderne, animations et sécurité renforcée pour les transactions.",
+    image: "/images/ecommerce-app.png",
+    github: "https://github.com/votre-ecommerce-app",
+    website: "https://ecommerce-app.com",
+    presentation: "https://canva.com/ecommerce-app",
+    technologies: ["Next.js", "Stripe", "Redux"],
+  },
+  {
+    slug: "blog-ai",
+    name: "Blog AI",
+    description:
+      "Blog propulsé par l’IA pour la génération de contenu, suggestions automatiques et analyse de tendances. Interface minimaliste, dark mode et gestion avancée des commentaires.",
+    image: "/images/blog-ai.png",
+    github: "https://github.com/votre-blog-ai",
+    website: "https://blog-ai.com",
+    presentation: "https://canva.com/blog-ai",
+    technologies: ["Next.js", "OpenAI API", "Tailwind CSS"],
+  },
+  {
+    slug: "job-board",
+    name: "Job Board",
+    description:
+      "Plateforme de recherche d’emploi moderne et responsive, avec filtres avancés, notifications personnalisées et espace recruteur. Intégration LinkedIn et gestion des candidatures en temps réel.",
+    image: "/images/job-board.png",
+    github: "https://github.com/votre-job-board",
+    website: "https://job-board.com",
+    presentation: "https://canva.com/job-board",
+    technologies: ["React", "Express", "MongoDB"],
+  },
+  {
+    slug: "microservices-api",
+    name: "Microservices API",
+    description:
+      "Architecture microservices pour API scalable, monitoring centralisé, documentation Swagger et CI/CD automatisé. Pensée pour les applications à fort trafic et les équipes DevOps.",
+    image: "/images/microservices-api.png",
+    github: "https://github.com/votre-microservices-api",
+    website: "https://microservices-api.com",
+    presentation: "https://canva.com/microservices-api",
+    technologies: ["Node.js", "Docker", "Kubernetes"],
+  },
+];
