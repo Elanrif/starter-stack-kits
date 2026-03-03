@@ -15,30 +15,51 @@ export default function ProjectsSection() {
   );
 
   return (
-    <section id="projects">
-      <div className="text-center mb-8 sm:mb-12">
-        <h2 className="text-2xl sm:text-5xl font-bold mb-4">Projects</h2>
-        <div className="w-full flex justify-center mt-6 sm:mt-8">
-          <input
-            type="text"
-            placeholder="Search projects..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full max-w-md px-4 py-2 sm:py-3 bg-gray-800/50 border border-red-900/30 rounded-lg text-white text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:border-red-900/60 transition-all"
-          />
-        </div>
-      </div>
+    <section
+      id="projects"
+      className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-linear-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent">
+            Featured Projects
+          </h2>
+          <p className="text-gray-400 text-base sm:text-lg mb-8 sm:mb-10">
+            Explore some of my recent work and contributions
+          </p>
 
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 w-fit">
+          {/* Search Bar */}
+          <div className="w-full flex justify-center">
+            <div className="w-full max-w-xl">
+              <input
+                type="text"
+                placeholder="🔍 Search projects..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-linear-to-r from-white/10 to-white/5 border border-white/20 rounded-lg sm:rounded-xl text-white text-sm sm:text-base placeholder-gray-500 focus:outline-none focus:border-white/50 focus:bg-white/15 transition-all duration-300 shadow-lg shadow-black/30"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="flex justify-center">
           {filteredProjects.length > 0 ? (
-            filteredProjects.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
-            ))
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-6xl">
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
+            </div>
           ) : (
-            <p className="text-center text-gray-500 col-span-full py-8 sm:py-12 text-sm sm:text-base">
-              No projects found.
-            </p>
+            <div className="text-center py-16 sm:py-20 w-full">
+              <p className="text-gray-500 text-base sm:text-lg">
+                😕 No projects found matching your search.
+              </p>
+              <p className="text-gray-600 text-sm mt-2">
+                Try adjusting your search terms
+              </p>
+            </div>
           )}
         </div>
       </div>
