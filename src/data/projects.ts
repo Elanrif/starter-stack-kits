@@ -1,12 +1,12 @@
 export const projects = [
   {
-    slug: "project-1",
-    name: "Projet 1",
+    slug: "reactjs-core",
+    name: "ReactJs Core",
     description:
-      "Application web moderne permettant de gérer des tâches quotidiennes avec une interface intuitive, des notifications en temps réel et une synchronisation multi-appareils. Idéale pour les freelances et les équipes agiles.",
+      "Application de démonstration mettant en avant les fonctionnalités clés de ReactJS, telles que les hooks, le contexte et la gestion d’état. Idéale pour les développeurs souhaitant approfondir leur compréhension de React.",
     image: "/images/project-1.png",
-    github: "https://github.com/votre-projet-1",
-    website: "https://votre-projet-1.com",
+    github: "https://github.com/Elanrif/reactjs-core-kit",
+    website: "https://reactjs-core-kit.vercel.app/",
     presentation: "https://canva.com/votre-projet-1",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     featured: true,
