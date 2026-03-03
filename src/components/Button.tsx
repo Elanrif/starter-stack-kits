@@ -1,10 +1,4 @@
-export default function Button({
-  children,
-  href,
-}: {
-  children: React.ReactNode;
-  href: string;
-}) {
+export default function Button({ children, href }: { children: React.ReactNode; href: string }) {
   return (
     <a
       href={href}

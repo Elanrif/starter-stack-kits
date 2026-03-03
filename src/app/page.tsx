@@ -5,11 +5,11 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative bg-black text-white min-h-screen overflow-hidden">
-      {/* Animated background with gradient and glow effects */}
+      {/* Animated background with linear and glow effects */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-red-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-black via-gray-950 to-black"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-white/3 rounded-full blur-3xl"></div>
       </div>
 
       <main className="relative z-10 container mx-auto px-6 py-12">
@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
 
         {/* Projects Section */}
-        <section className="mt-24">
+        <section className="mt-1.5">
           <ProjectsSection />
         </section>
 
@@ -27,12 +27,12 @@ export default function Home() {
           <p className="text-lg text-gray-400 mb-12">
             Open to remote & freelance opportunities. Let’s connect!
           </p>
-          <div className="flex justify-center gap-8 bg-gradient-to-r from-red-900/20 to-red-900/10 border border-red-900/30 rounded-2xl p-8 w-fit mx-auto hover:border-red-900/60 transition-all duration-300">
+          <div className="flex justify-center gap-8 bg-linear-to-r from-white/10 to-white/5 border border-white/20 rounded-2xl p-8 w-fit mx-auto hover:border-white/40 transition-all duration-300 backdrop-blur-sm">
             <Link
               href="https://github.com/johndoe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl hover:text-red-400 transition-colors"
+              className="text-3xl hover:text-white transition-colors"
             >
               <svg
                 className="w-10 h-10"
@@ -46,7 +46,7 @@ export default function Home() {
               href="https://linkedin.com/in/johndoe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl hover:text-red-400 transition-colors"
+              className="text-3xl hover:text-white transition-colors"
             >
               <svg
                 className="w-10 h-10"
@@ -58,7 +58,7 @@ export default function Home() {
             </Link>
             <Link
               href="mailto:johndoe@example.com"
-              className="text-3xl hover:text-red-400 transition-colors"
+              className="text-3xl hover:text-white transition-colors"
             >
               <svg
                 className="w-10 h-10"

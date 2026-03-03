@@ -9,8 +9,9 @@ export default function ProjectsSection() {
 
   const filteredProjects = projects.filter(
     (project) =>
-      project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase()),
+      project.featured &&
+      (project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchTerm.toLowerCase())),
   );
 
   return (
@@ -28,16 +29,18 @@ export default function ProjectsSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredProjects.length > 0 ? (
-          filteredProjects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))
-        ) : (
-          <p className="text-center text-gray-500 col-span-full py-12">
-            No projects found.
-          </p>
-        )}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 w-fit">
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))
+          ) : (
+            <p className="text-center text-gray-500 col-span-full py-12">
+              No projects found.
+            </p>
+          )}
+        </div>
       </div>
     </section>
   );

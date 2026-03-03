@@ -9,6 +9,7 @@ export const projects = [
     website: "https://votre-projet-1.com",
     presentation: "https://canva.com/votre-projet-1",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    featured: true,
   },
   {
     slug: "project-2",
@@ -20,6 +21,7 @@ export const projects = [
     website: "https://votre-projet-2.com",
     presentation: "https://canva.com/votre-projet-2",
     technologies: ["React", "Node.js", "CSS"],
+    featured: true,
   },
   {
     slug: "portfolio-premium",
@@ -31,6 +33,7 @@ export const projects = [
     website: "https://portfolio-premium.com",
     presentation: "https://canva.com/portfolio-premium",
     technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
+    featured: true,
   },
   {
     slug: "saas-dashboard",
@@ -42,6 +45,7 @@ export const projects = [
     website: "https://saas-dashboard.com",
     presentation: "https://canva.com/saas-dashboard",
     technologies: ["React", "Recharts", "Styled Components"],
+    featured: false,
   },
   {
     slug: "ecommerce-app",
@@ -53,6 +57,7 @@ export const projects = [
     website: "https://ecommerce-app.com",
     presentation: "https://canva.com/ecommerce-app",
     technologies: ["Next.js", "Stripe", "Redux"],
+    featured: false,
   },
   {
     slug: "blog-ai",
@@ -64,6 +69,7 @@ export const projects = [
     website: "https://blog-ai.com",
     presentation: "https://canva.com/blog-ai",
     technologies: ["Next.js", "OpenAI API", "Tailwind CSS"],
+    featured: false,
   },
   {
     slug: "job-board",
@@ -75,6 +81,7 @@ export const projects = [
     website: "https://job-board.com",
     presentation: "https://canva.com/job-board",
     technologies: ["React", "Express", "MongoDB"],
+    featured: false,
   },
   {
     slug: "microservices-api",
@@ -86,5 +93,6 @@ export const projects = [
     website: "https://microservices-api.com",
     presentation: "https://canva.com/microservices-api",
     technologies: ["Node.js", "Docker", "Kubernetes"],
+    featured: false,
   },
 ];
