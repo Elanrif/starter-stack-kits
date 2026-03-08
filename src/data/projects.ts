@@ -18,7 +18,7 @@ export const projects = [
       "Template de démarrage pour Next.js avec TypeScript, Tailwind CSS, et une structure de projet optimisée. Parfait pour les développeurs souhaitant lancer rapidement des projets modernes avec Next.js.",
     image: undefined,
     github: "https://github.com/Elanrif/nextjs-starter-kit",
-    website: "https://nextjs-starter-kit.vercel.app/",
+    website: "https://nextjs-starter-kit-lake.vercel.app/",
     presentation: "https://canva.com/votre-projet-2",
     technologies: ["Nextjs", "Tailwind.css", "TypeScript"],
     featured: true,
